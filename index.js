@@ -2,7 +2,7 @@ let ticket = 1
 
 function takeANumber(line) {
   line.push(ticket) //`1` `2`
-  ticket += 1
+  ticket ++
   return `Welcome. You are number ${line[line.length - 1]}.`
 }
 
@@ -10,8 +10,8 @@ function nowServing (line) {
   if (line.length === 0) {
     return "There is nobody waiting to be served!"
   }
-
-  return `Currently serving ${line.shift()}.`
+  let firstCustomer = line.shift()
+  return `Currently serving ${firstCustomer}.`
 }
 //`1`,`2`,`3`
 function currentLine(line) {
@@ -20,7 +20,7 @@ function currentLine(line) {
   }
 
   // let numAndName = []
-  // 
+  //
   // for (let i = 0; i < line.length; i++) {
   //   numAndName.push(` ${i + 1}. ${line[i]}`)
   // }
@@ -28,5 +28,4 @@ function currentLine(line) {
   // numAndName.join(",")
 
   return `The line is currently: ${line.join(`, `)}`
-  //1, 2, 3, 
 }
