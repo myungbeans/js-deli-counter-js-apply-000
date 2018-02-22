@@ -3,7 +3,7 @@ let ticket = 0
 function takeANumber(line) {
   ticket ++
   line.push(ticket) //`1` `2`
-  return `Welcome. You are number ${line[line.length - 1]}.`
+  return `Welcome. You are number ${ticket}.`
 }
 
 function nowServing (line) {
